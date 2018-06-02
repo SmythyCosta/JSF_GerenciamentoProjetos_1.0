@@ -13,8 +13,8 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
-@Table(name = "grupo")
-public class Grupo implements Serializable {
+@Table(name = "setor")
+public class Setor implements Serializable {
 
 	/*
 	 * Variables
@@ -33,7 +33,7 @@ public class Grupo implements Serializable {
 	/*
 	 * Constuctor
 	 */
-	public Grupo() {
+	public Setor() {
 	}
 
 	
@@ -68,6 +68,7 @@ public class Grupo implements Serializable {
 		return result;
 	}
 
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -76,7 +77,7 @@ public class Grupo implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Grupo other = (Grupo) obj;
+		Setor other = (Setor) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -84,10 +85,12 @@ public class Grupo implements Serializable {
 			return false;
 		return true;
 	}
-
+	
+	
 	@Override
 	public String toString() {
 		return nome;
 	}
+	
 
 }
