@@ -3,7 +3,6 @@ package br.com.projetos.test;
 import javax.persistence.EntityManager;
 
 import br.com.projetos.jpa.EntityManagerUtil;
-import br.com.projetos.models.Grupo;
 import br.com.projetos.models.Setor;
 
 public class TesteInserirSetor {
