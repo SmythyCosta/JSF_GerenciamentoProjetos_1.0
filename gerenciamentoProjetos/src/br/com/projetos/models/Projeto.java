@@ -1,8 +1,11 @@
 package br.com.projetos.models;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,10 +14,14 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 import org.hibernate.annotations.Type;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
@@ -57,6 +64,12 @@ public class Projeto implements Serializable{
 	@ManyToOne
 	@JoinColumn(name="setor", referencedColumnName="id", nullable=false)
 	private Setor setor;
+	
+	@OneToMany(mappedBy="projeto", cascade= {CascadeType.ALL},
+			orphanRemoval=true)
+	@LazyCollection(LazyCollectionOption.EXTRA)
+	@OrderBy(value="id asc")
+	private List<ProjetoFuncionario> funcionarios = new ArrayList<ProjetoFuncionario>();
 	
 	public Projeto() {
 		// TODO Auto-generated constructor stub
@@ -146,6 +159,31 @@ public class Projeto implements Serializable{
 	@Override
 	public String toString() {
 		return nome;
+	}
+
+	public List<ProjetoFuncionario> getFuncionarios() {
+		return funcionarios;
+	}
+
+	public void setFuncionarios(List<ProjetoFuncionario> funcionarios) {
+		this.funcionarios = funcionarios;
+	}
+	
+	
+	
+	public void adicionarFuncionario(ProjetoFuncionario obj){
+		obj.setProjeto(this);
+		this.funcionarios.add(obj);
+	}
+	
+	public void removerFuncionario(ProjetoFuncionario obj){
+		if (this.funcionarios.contains(obj)){
+			this.funcionarios.remove(obj);
+		}
+	}
+	
+	public void removerTodosFuncionario(){
+		this.funcionarios.clear();
 	}
 	
 	
