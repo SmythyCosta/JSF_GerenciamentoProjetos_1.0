@@ -1,5 +1,5 @@
 package br.com.projetos.controller;
 
-public class ControleFuncionario {
+public class FuncionarioControle {
 
 }
