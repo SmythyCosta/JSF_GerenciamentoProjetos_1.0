@@ -1,11 +1,18 @@
 package br.com.projetos.converters;
 
+import java.io.Serializable;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
 import br.com.projetos.dao.FuncionarioDAO;
 import br.com.projetos.dao.ProjetoDAO;
 import br.com.projetos.dao.SetorDAO;
 import br.com.projetos.models.Projeto;
 
-public class ControleProjeto {
+@ManagedBean(name="controleProjeto")
+@SessionScoped
+public class ControleProjeto implements Serializable {
 
 	private ProjetoDAO dao;
 	private Projeto objeto;
