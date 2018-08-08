@@ -4,24 +4,48 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"> 
 
-<h:head><title>Edição de grupos</title></h:head> 
+<h:head><title>Edição de Projetos</title>
+	<h:outputScript library="js" name="scripts.js" />
+</h:head> 
 <h:body> 
 	<h:form>
 		<h:messages />
 		<h:panelGrid columns="2">
-			<f:facet name="header">Edição de grupos</f:facet>
+			<f:facet name="header">Edição de projetos</f:facet>
 			<f:facet name="footer">
 				<div align="center">
-					<h:commandButton value="Cancelar"
-						 action="#{grupoController.cancelar()}" />
-					<h:commandButton value="Gravar" action="#{grupoController.gravar()}"  />
+					<h:commandButton action="#{controleProjeto.cancelar()}" value="Cancelar" 
+					immediate="true" />
+					<h:commandButton action="#{controleProjeto.gravar()}" value="Gravar"  />
 				</div>
 			</f:facet>
 			<h:outputLabel value="ID" />
-			<h:inputText value="#{grupoController.objeto.id}" readonly="true"/>
+			<h:inputText value="#{controleProjeto.objeto.id}" readonly="true" />
 			<h:outputLabel value="Nome" />
-			<h:inputText value="#{grupoController.objeto.nome}" maxlength="40"
-				size="40" />
+			<h:inputText value="#{controleProjeto.objeto.nome}" size="40" maxlength="40" />
+			<h:outputLabel value="Descrição" />
+			<h:inputTextarea value="#{controleProjeto.objeto.descricao}"
+				rows="5" cols="60" /> 
+			<h:outputLabel value="Inicio" />
+			<h:inputText value="#{controleProjeto.objeto.inicio}"
+			size="12" onkeydown="Mascara(this,Data);" onkeyup="Mascara(this,Data);"
+			onkeypress="Mascara(this,Data);">
+				<f:converter converterId="converterCalendar"/>
+			</h:inputText>
+			<h:outputLabel value="Fim" />
+			<h:inputText value="#{controleProjeto.objeto.fim}"
+			size="12" onkeydown="Mascara(this,Data);" onkeyup="Mascara(this,Data);"
+			onkeypress="Mascara(this,Data);">
+				<f:converter converterId="converterCalendar"/>
+			</h:inputText>
+			<h:outputLabel value="Ativo" />
+			<h:selectBooleanCheckbox value="#{controleProjeto.objeto.ativo}" />
+			<h:outputLabel value="Setor" />
+			<h:selectOneMenu value="#{controleProjeto.objeto.setor}"
+				converter="#{controleProjeto.converterSetor}">
+				<f:selectItem itemLabel="Selecione um setor" noSelectionOption="true"/>
+				<f:selectItems value="#{controleProjeto.daoSetor.ListarTodos()}"/>
+			</h:selectOneMenu>
 		</h:panelGrid>
 	</h:form>
 </h:body> 
