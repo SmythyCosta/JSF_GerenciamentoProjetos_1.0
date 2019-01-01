@@ -19,7 +19,7 @@ public class GrupoDAO {
 	}
 	
 	public List<Grupo> ListarTodos(){
-		return em.createQuery("from Grupo order by nome").getResultList();
+		return em.createQuery("from Grupo order by id desc").getResultList();
 	}
 	
 	public boolean gravar(Grupo obj){
@@ -67,7 +67,6 @@ public class GrupoDAO {
 	public Grupo localizar(Integer id){
 		return em.find(Grupo.class, id);
 	}
-	
 
 	public EntityManager getEm() {
 		return em;

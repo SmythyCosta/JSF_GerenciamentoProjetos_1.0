@@ -16,9 +16,6 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Table(name = "grupo")
 public class Grupo implements Serializable {
 
-	/*
-	 * Variables
-	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="id")

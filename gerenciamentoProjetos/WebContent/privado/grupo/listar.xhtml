@@ -9,8 +9,8 @@
 	<h:form>
 		<h:messages />
 		<h:commandLink value="Novo registro" action="#{grupoController.novo}"  />
-		<h:dataTable value="#{grupoController.dao.ListarTodos()}" var="obj" 
-			frame="box" rules="all" cellpadding="3">
+		<h:dataTable value="#{grupoController.dao.ListarTodos()}" var="obj" frame="box" rules="all" cellpadding="3">
+			
 			<h:column>
 				<f:facet name="header">ID</f:facet>
 				#{obj.id}
