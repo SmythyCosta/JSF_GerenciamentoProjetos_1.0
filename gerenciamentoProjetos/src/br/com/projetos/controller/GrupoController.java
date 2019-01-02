@@ -55,7 +55,11 @@ public class GrupoController implements Serializable{
 	}
 	
 	
-	/*Getrs and Seters*/
+	// *************************
+	// gets and
+	// sets
+	// *************************
+	
 	public GrupoDAO getDao() {
 		return dao;
 	}

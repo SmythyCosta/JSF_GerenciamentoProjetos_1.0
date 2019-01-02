@@ -65,8 +65,10 @@ public class FuncionarioControle implements Serializable {
 	}
 	
 	
+	// *************************
 	// gets and
 	// sets
+	// *************************
 
 	public FuncionarioDAO getDao() {
 		return dao;
