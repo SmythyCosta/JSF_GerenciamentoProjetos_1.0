@@ -1,10 +1,12 @@
-package br.com.projetos.converters;
+package br.com.projetos.controller;
 
 import java.io.Serializable;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
+import br.com.projetos.converters.ConverterFuncionario;
+import br.com.projetos.converters.ConverterSetor;
 import br.com.projetos.dao.FuncionarioDAO;
 import br.com.projetos.dao.ProjetoDAO;
 import br.com.projetos.dao.SetorDAO;

@@ -10,7 +10,9 @@ import javax.faces.convert.FacesConverter;
 
 @FacesConverter(value="converterCalendar")
 public class ConverterCalendar implements Converter{
+	
 	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	
 	
 	// converte da tela para o objeto
 	@Override
@@ -25,6 +27,7 @@ public class ConverterCalendar implements Converter{
 		return c;
 	}
 
+	
 	// converte do objeto para a tela
 	@Override
 	public String getAsString(FacesContext arg0, UIComponent arg1, Object obj) {
