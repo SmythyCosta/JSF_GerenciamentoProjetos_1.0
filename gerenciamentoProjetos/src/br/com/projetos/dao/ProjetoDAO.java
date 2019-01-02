@@ -63,6 +63,12 @@ public class ProjetoDAO {
 	public Projeto localizar(Integer id){
 		return em.find(Projeto.class, id);
 	}
+	
+	
+	// *************************
+	// gets and
+	// sets
+	// *************************
 
 	public EntityManager getEm() {
 		return em;

@@ -67,6 +67,12 @@ public class GrupoDAO {
 	public Grupo localizar(Integer id){
 		return em.find(Grupo.class, id);
 	}
+	
+	
+	// *************************
+	// gets and
+	// sets
+	// *************************
 
 	public EntityManager getEm() {
 		return em;

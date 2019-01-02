@@ -62,6 +62,12 @@ public class SetorDAO {
 	public Setor localizar(Integer id) {
 		return em.find(Setor.class, id);
 	}
+	
+	
+	// *************************
+	// gets and
+	// sets
+	// *************************
 
 	public EntityManager getEm() {
 		return em;

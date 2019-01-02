@@ -62,6 +62,12 @@ public class FuncionarioDAO {
 	public Funcionario localizar(Integer id) {
 		return em.find(Funcionario.class, id);
 	}
+	
+	
+	// *************************
+	// gets and
+	// sets
+	// *************************
 
 	public EntityManager getEm() {
 		return em;
