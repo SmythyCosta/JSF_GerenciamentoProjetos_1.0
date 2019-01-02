@@ -14,7 +14,7 @@ import br.com.projetos.models.Projeto;
 
 @ManagedBean(name="controleProjeto")
 @SessionScoped
-public class ControleProjeto implements Serializable {
+public class ProjetoControle implements Serializable {
 
 	private ProjetoDAO dao;
 	private Projeto objeto;
@@ -23,7 +23,7 @@ public class ControleProjeto implements Serializable {
 	private SetorDAO daoSetor;
 	private ConverterSetor converterSetor;
 	
-	public ControleProjeto(){
+	public ProjetoControle(){
 		dao = new ProjetoDAO();
 		daoFuncionario = new FuncionarioDAO();
 		converterFuncionario = new ConverterFuncionario();
@@ -61,6 +61,12 @@ public class ControleProjeto implements Serializable {
 		dao.excluir(obj);
 		return "listar";
 	}
+	
+	
+	// *************************
+	// gets and
+	// sets
+	// *************************
 
 	public ProjetoDAO getDao() {
 		return dao;
