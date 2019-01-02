@@ -16,30 +16,19 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Table(name = "setor")
 public class Setor implements Serializable {
 
-	/*
-	 * Variables
-	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="id")
+	@Column(name = "id")
 	private Integer id;
-	
-	@NotEmpty(message="Peencha o campo nome")
-	@Length(max=50, message="O nome não pode ultrapassar {max} caracteres")
-	@Column(name="nome", length=50, nullable=false)
+
+	@NotEmpty(message = "Peencha o campo nome")
+	@Length(max = 50, message = "O nome não pode ultrapassar {max} caracteres")
+	@Column(name = "nome", length = 50, nullable = false)
 	private String nome;
 
-	
-	/*
-	 * Constuctor
-	 */
 	public Setor() {
 	}
 
-	
-	/*
-	 * Get an Setrs
-	 */
 	public Integer getId() {
 		return id;
 	}
@@ -56,10 +45,6 @@ public class Setor implements Serializable {
 		this.nome = nome;
 	}
 
-	
-	/*
-	 * Equals HashCode
-	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -67,7 +52,6 @@ public class Setor implements Serializable {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -85,12 +69,10 @@ public class Setor implements Serializable {
 			return false;
 		return true;
 	}
-	
-	
+
 	@Override
 	public String toString() {
 		return nome;
 	}
-	
 
 }

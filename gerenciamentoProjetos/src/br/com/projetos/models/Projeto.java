@@ -169,8 +169,6 @@ public class Projeto implements Serializable{
 		this.funcionarios = funcionarios;
 	}
 	
-	
-	
 	public void adicionarFuncionario(ProjetoFuncionario obj){
 		obj.setProjeto(this);
 		this.funcionarios.add(obj);
@@ -185,8 +183,6 @@ public class Projeto implements Serializable{
 	public void removerTodosFuncionario(){
 		this.funcionarios.clear();
 	}
-	
-	
-	
+
 	
 }

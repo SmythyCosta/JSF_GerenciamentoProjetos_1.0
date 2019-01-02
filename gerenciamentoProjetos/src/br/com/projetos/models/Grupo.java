@@ -18,25 +18,17 @@ public class Grupo implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="id")
+	@Column(name = "id")
 	private Integer id;
-	
-	@NotEmpty(message="Peencha o campo nome")
-	@Length(max=50, message="O nome não pode ultrapassar {max} caracteres")
-	@Column(name="nome", length=50, nullable=false)
+
+	@NotEmpty(message = "Peencha o campo nome")
+	@Length(max = 50, message = "O nome não pode ultrapassar {max} caracteres")
+	@Column(name = "nome", length = 50, nullable = false)
 	private String nome;
 
-	
-	/*
-	 * Constuctor
-	 */
 	public Grupo() {
 	}
 
-	
-	/*
-	 * Get an Setrs
-	 */
 	public Integer getId() {
 		return id;
 	}
@@ -53,10 +45,6 @@ public class Grupo implements Serializable {
 		this.nome = nome;
 	}
 
-	
-	/*
-	 * Equals HashCode
-	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
