@@ -64,6 +64,13 @@ public class ProjetoDAO {
 		return em.find(Projeto.class, id);
 	}
 	
+	public void rollback(){
+		if (em.getTransaction().isActive() == false){
+			em.getTransaction().begin();
+		}
+		em.getTransaction().rollback();
+	}
+	
 	
 	public EntityManager getEm() {
 		return em;

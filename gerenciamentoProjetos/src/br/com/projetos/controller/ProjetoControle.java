@@ -13,6 +13,7 @@ import br.com.projetos.dao.ProjetoDAO;
 import br.com.projetos.dao.SetorDAO;
 import br.com.projetos.models.Funcionario;
 import br.com.projetos.models.Projeto;
+import br.com.projetos.models.ProjetoFuncionario;
 
 @ManagedBean(name="controleProjeto")
 @SessionScoped
