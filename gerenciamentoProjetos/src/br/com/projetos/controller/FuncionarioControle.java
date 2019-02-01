@@ -87,9 +87,9 @@ public class FuncionarioControle implements Serializable {
 		}
 	}
 	
-	/**
+	/*
 	 * recuperando o imagem do usuario
-	 */
+	 **/
 	public StreamedContent getImagemDinamica(){
 		String strid = FacesContext.getCurrentInstance().getExternalContext()
 				.getRequestParameterMap().get("id_imagem");
@@ -101,11 +101,6 @@ public class FuncionarioControle implements Serializable {
 		return new DefaultStreamedContent();
 	}
 	
-	
-	// *************************
-	// gets and
-	// sets
-	// *************************
 
 	public FuncionarioDAO getDao() {
 		return dao;

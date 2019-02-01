@@ -65,11 +65,6 @@ public class ProjetoDAO {
 	}
 	
 	
-	// *************************
-	// gets and
-	// sets
-	// *************************
-
 	public EntityManager getEm() {
 		return em;
 	}

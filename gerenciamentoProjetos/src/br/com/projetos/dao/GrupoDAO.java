@@ -68,11 +68,6 @@ public class GrupoDAO {
 		return em.find(Grupo.class, id);
 	}
 	
-	
-	// *************************
-	// gets and
-	// sets
-	// *************************
 
 	public EntityManager getEm() {
 		return em;

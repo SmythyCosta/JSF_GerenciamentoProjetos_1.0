@@ -54,12 +54,6 @@ public class GrupoController implements Serializable{
 		return "listar";
 	}
 	
-	
-	// *************************
-	// gets and
-	// sets
-	// *************************
-	
 	public GrupoDAO getDao() {
 		return dao;
 	}

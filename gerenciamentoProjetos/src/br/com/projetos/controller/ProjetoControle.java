@@ -18,6 +18,7 @@ public class ProjetoControle implements Serializable {
 
 	private ProjetoDAO dao;
 	private Projeto objeto;
+	
 	private FuncionarioDAO  daoFuncionario;
 	private ConverterFuncionario converterFuncionario;
 	private SetorDAO daoSetor;
@@ -61,12 +62,7 @@ public class ProjetoControle implements Serializable {
 		dao.excluir(obj);
 		return "listar";
 	}
-	
-	
-	// *************************
-	// gets and
-	// sets
-	// *************************
+
 
 	public ProjetoDAO getDao() {
 		return dao;

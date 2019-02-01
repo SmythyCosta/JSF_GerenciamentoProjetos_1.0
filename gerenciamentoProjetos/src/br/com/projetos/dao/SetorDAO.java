@@ -63,11 +63,6 @@ public class SetorDAO {
 		return em.find(Setor.class, id);
 	}
 	
-	
-	// *************************
-	// gets and
-	// sets
-	// *************************
 
 	public EntityManager getEm() {
 		return em;
