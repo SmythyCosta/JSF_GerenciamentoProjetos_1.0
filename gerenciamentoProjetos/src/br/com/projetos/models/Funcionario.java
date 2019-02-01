@@ -220,7 +220,7 @@ public class Funcionario implements Serializable {
 
 	@Override
 	public String toString() {
-		return "nome";
+		return nome;
 	}
 	
 	//retorno da imagem, sendo feita pelo primeFaces.
