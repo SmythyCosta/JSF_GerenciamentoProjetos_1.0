@@ -10,7 +10,7 @@ import br.com.projetos.models.Grupo;
 
 
 
-@ManagedBean(name="grupoController")	
+@ManagedBean(name="controleGrupo")	
 @SessionScoped
 public class GrupoController implements Serializable{
 	
