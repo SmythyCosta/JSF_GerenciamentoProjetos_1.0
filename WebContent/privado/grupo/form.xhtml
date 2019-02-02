@@ -13,15 +13,15 @@
 			<f:facet name="header">Edição de grupos</f:facet>
 			<f:facet name="footer">
 				<div align="center">
-					<h:commandButton value="Cancelar" action="#{grupoController.cancelar()}" />
-					<h:commandButton value="Gravar" action="#{grupoController.gravar()}"  />
+					<h:commandButton value="Cancelar" action="#{controleGrupo.cancelar()}" />
+					<h:commandButton value="Gravar" action="#{controleGrupo.gravar()}"  />
 				</div>
 			</f:facet>
 			
 			<h:outputLabel value="ID" />
-			<h:inputText value="#{grupoController.objeto.id}" readonly="true"/>
+			<h:inputText value="#{controleGrupo.objeto.id}" readonly="true"/>
 			<h:outputLabel value="Nome" />
-			<h:inputText value="#{grupoController.objeto.nome}" maxlength="40" size="40" />
+			<h:inputText value="#{controleGrupo.objeto.nome}" maxlength="40" size="40" />
 			
 		</h:panelGrid>
 	</h:form>
