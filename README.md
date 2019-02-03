@@ -1,1 +1,4 @@
-# JSF_GerenciamentoProjetos_1.0
+# Aplicação para Gerenciamento de Projetos 1.0
+
+# Dev
+- teste com generics SetorEntity(ok)
