@@ -60,12 +60,15 @@ public class SetorController implements Serializable {
 	public DAOSetor<Setor> getDao() {
 		return dao;
 	}
+	
 	public void setDao(DAOSetor<Setor> dao) {
 		this.dao = dao;
 	}
+	
 	public Setor getObjeto() {
 		return objeto;
 	}
+	
 	public void setObjeto(Setor objeto) {
 		this.objeto = objeto;
 	}
