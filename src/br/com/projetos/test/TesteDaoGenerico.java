@@ -8,7 +8,7 @@ import br.com.projetos.models.Setor;
 public class TesteDaoGenerico {
 
 	public static void main(String[] args) {
-		SetorDAO<Setor> dao = new SetorDAO<Setor>();
+		SetorDAO dao = new SetorDAO();
 		List<Setor> lista = dao.listar();
 		for (Setor o : lista){
 			System.out.println("Codigo: "+o.getId()+" Nome: "+o.getNome());
