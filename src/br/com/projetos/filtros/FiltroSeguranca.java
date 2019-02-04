@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import br.com.projetos.controller.ControleLogin;
+
 @WebFilter(urlPatterns="/privado/*")
 public class FiltroSeguranca implements Filter {
 	
