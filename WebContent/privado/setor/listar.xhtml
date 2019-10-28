@@ -7,9 +7,11 @@
 <h:head><title>Listagem de setores</title></h:head> 
 <h:body> 
 	<h:form>
+		
 		<h:messages />
 		<h:commandLink action="/index?faces-redirect=true" value="Inicio" /><br/>
 		<h:commandLink action="#{controleSetor.novo()}" value="Novo registro" />
+		
 		<h:panelGrid columns="5">
 			<h:selectOneMenu value="#{controleSetor.dao.ordemAtual}"
 				converter="#{controleSetor.dao.converterOrdem}">
@@ -18,15 +20,17 @@
 			</h:selectOneMenu>
 			<h:outputLabel value="Filtro" />
 			<h:inputText value="#{controleSetor.dao.filtro}" >
-				<f:ajax execute="@form" render="@form" event="keyup"/>
+				<f:ajax execute="@form" render="@form" event="dblclick"/>
 			</h:inputText>
 			<h:outputLabel value="Maximo objetos" />
 			<h:inputText value="#{controleSetor.dao.maximoObjetos}" >
 				<f:ajax execute="@form" render="@form" event="keyup"/>
 			</h:inputText>			
 		</h:panelGrid>
+		
 		<h:dataTable value="#{controleSetor.dao.listar()}" var="obj"
 			frame="box" rules="all" cellpadding="3">
+			
 			<f:facet name="header">Listagem de Setores</f:facet>
 			<f:facet name="footer">
 				<div align="center">
@@ -49,6 +53,7 @@
 					</h:commandButton>									
 				</div>
 			</f:facet>
+			
 			<h:column>
 				<f:facet name="header">ID</f:facet>
 				#{obj.id}
@@ -65,7 +70,8 @@
 				<f:facet name="header">Excluir</f:facet>
 				<h:commandLink action="#{controleSetor.excluir(obj)}" value="Excluir"
 					onclick="if (!confirm('Confirme a exclusão do setor?')) return false" />
-			</h:column>								
+			</h:column>		
+									
 		</h:dataTable>	
 	</h:form>
 </h:body> 

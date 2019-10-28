@@ -10,10 +10,11 @@
 
 
 		<!-- mapeamento de entidades  -->
+		<class>br.com.projetos.models.Funcionario</class>
 		<class>br.com.projetos.models.Grupo</class>
-		
-		
-		
+		<class>br.com.projetos.models.Projeto</class>
+		<class>br.com.projetos.models.ProjetoFuncionario</class>
+		<class>br.com.projetos.models.Setor</class>
 		
 
 		<properties>
